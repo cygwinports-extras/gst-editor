@@ -1,0 +1,92 @@
+gstreamer-editor
+------------------------------------------
+GStreamer GUI programs: pipeline editor, element inspector, 
+and pipeline launcher.
+
+Runtime requirements:
+  cygwin-1.5.21-1
+  gdk-pixbuf2-2.8.20-1
+  gstreamer08-0.8.12-1
+  libX11_6-1.0.2-1
+  libbonoboui2-2.14.0-1
+  libglade2-2.6.0-1
+  libgnome2-2.14.1-1
+  libgnomeui2-2.14.1-1
+
+Build requirements:
+(besides corresponding devel packages)
+  cygwin-1.5.21-1
+  autoconf2.5-2.59-2
+  automake1.9-1.9.6-1
+  binutils-20060709-1
+  cygport-0.2.4-1
+  gawk-3.1.5-2
+  gcc-core-3.4.4-1
+  libtool1.5-1.5.22-1
+  make-3.80-1
+  pkg-config-0.20-1
+  sed-4.1.5-1
+
+Canonical website:
+  http://gstreamer.freedesktop.org/
+
+Canonical download:
+  http://gstreamer.freedesktop.org/src/gst-plugins/
+
+-------------------------------------------
+
+Build instructions:
+  unpack gstreamer-editor-0.8.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./gstreamer-editor-0.8.0-X.cygport all
+
+This will create:
+  /usr/src/gstreamer-editor-0.8.0-X-src.tar.bz2
+  /usr/src/gstreamer-editor-0.8.0-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/postinstall/gstreamer-editor.sh
+  /usr/bin/gst-editor.exe
+  /usr/bin/gst-inspect-gui.exe
+  /usr/bin/gst-launch-gui.exe
+  /usr/share/applications/gst-editor.desktop
+  /usr/share/applications/gst-inspect.desktop
+  /usr/share/applications/gst-launch.desktop
+  /usr/share/doc/Cygwin/gstreamer-editor-0.8.0.README
+  /usr/share/doc/gstreamer-editor-0.8.0/AUTHORS
+  /usr/share/doc/gstreamer-editor-0.8.0/COPYING
+  /usr/share/doc/gstreamer-editor-0.8.0/ChangeLog
+  /usr/share/doc/gstreamer-editor-0.8.0/HACKING
+  /usr/share/doc/gstreamer-editor-0.8.0/INSTALL
+  /usr/share/doc/gstreamer-editor-0.8.0/NEWS
+  /usr/share/doc/gstreamer-editor-0.8.0/README
+  /usr/share/doc/gstreamer-editor-0.8.0/TODO
+  /usr/share/gst-editor/editor.glade2
+  /usr/share/gst-editor/gnome/help/gst-editor/C/gst-editor-manual.xml
+  /usr/share/gst-editor/gnome/help/gst-editor/C/legal.xml
+  /usr/share/gst-editor/gst-editor.png
+  /usr/share/locale/nl/LC_MESSAGES/gst-editor.mo
+  /usr/share/locale/no/LC_MESSAGES/gst-editor.mo
+  /usr/share/man/man1/gst-editor.1.gz
+  /usr/share/man/man1/gst-inspect-gui.1.gz
+  /usr/share/man/man1/gst-launch-gui.1.gz
+  /usr/share/omf/gst-editor/gst-editor-manual-C.omf
+  /usr/share/pixmaps/gst-editor.png
+  /usr/share/pixmaps/gst-inspect.png
+  /usr/share/pixmaps/gst-launch.png
+
+------------------
+
+Port Notes:
+
+----- version 0.8.0-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
