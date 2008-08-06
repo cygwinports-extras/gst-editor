@@ -1,4 +1,3 @@
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x 'Makefile.in*' -x 'makefile.in*' -x configure -x gnome-doc-utils.make -x intltool.m4 -x omf.make -x xmldocs.make -x common -x m4 -x po -x autoregen.sh -x stamp-h.in origsrc/gst-editor-0.8.0/autogen.sh src/gst-editor-0.8.0/autogen.sh
 --- origsrc/gst-editor-0.8.0/autogen.sh	1969-12-31 18:00:00.000000000 -0600
 +++ src/gst-editor-0.8.0/autogen.sh	2006-07-21 17:40:32.863625000 -0500
 @@ -0,0 +1,92 @@
@@ -94,7 +93,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depco
 +}
 +
 +echo "Now type 'make' to compile $package."
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x 'Makefile.in*' -x 'makefile.in*' -x configure -x gnome-doc-utils.make -x intltool.m4 -x omf.make -x xmldocs.make -x common -x m4 -x po -x autoregen.sh -x stamp-h.in origsrc/gst-editor-0.8.0/libs/gst/debug-ui/Makefile.am src/gst-editor-0.8.0/libs/gst/debug-ui/Makefile.am
 --- origsrc/gst-editor-0.8.0/libs/gst/debug-ui/Makefile.am	2004-04-03 00:24:03.000000000 -0600
 +++ src/gst-editor-0.8.0/libs/gst/debug-ui/Makefile.am	2006-08-15 16:25:23.940375000 -0500
 @@ -1,10 +1,11 @@
@@ -111,7 +109,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depco
  
  libgstdebuguiincludedir = $(includedir)/@PACKAGE@-@VERSION@/gst/debug-ui
  libgstdebuguiinclude_HEADERS = debug-ui.h
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x 'Makefile.in*' -x 'makefile.in*' -x configure -x gnome-doc-utils.make -x intltool.m4 -x omf.make -x xmldocs.make -x common -x m4 -x po -x autoregen.sh -x stamp-h.in origsrc/gst-editor-0.8.0/libs/gst/editor/Makefile.am src/gst-editor-0.8.0/libs/gst/editor/Makefile.am
 --- origsrc/gst-editor-0.8.0/libs/gst/editor/Makefile.am	2004-04-23 08:45:46.000000000 -0500
 +++ src/gst-editor-0.8.0/libs/gst/editor/Makefile.am	2006-08-15 16:26:28.377875000 -0500
 @@ -1,4 +1,4 @@
@@ -136,7 +133,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depco
  
  noinst_HEADERS =                \
          gsteditorproperty.h     \
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x 'Makefile.in*' -x 'makefile.in*' -x configure -x gnome-doc-utils.make -x intltool.m4 -x omf.make -x xmldocs.make -x common -x m4 -x po -x autoregen.sh -x stamp-h.in origsrc/gst-editor-0.8.0/libs/gst/element-browser/Makefile.am src/gst-editor-0.8.0/libs/gst/element-browser/Makefile.am
 --- origsrc/gst-editor-0.8.0/libs/gst/element-browser/Makefile.am	2004-04-11 13:42:14.000000000 -0500
 +++ src/gst-editor-0.8.0/libs/gst/element-browser/Makefile.am	2006-08-15 16:25:47.971625000 -0500
 @@ -1,4 +1,4 @@
@@ -155,7 +151,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depco
  
  libgstelementbrowserincludedir = $(includedir)/@PACKAGE@-@VERSION@/gst/element-browser
  libgstelementbrowserinclude_HEADERS = browser.h caps-tree.h element-tree.h
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x 'Makefile.in*' -x 'makefile.in*' -x configure -x gnome-doc-utils.make -x intltool.m4 -x omf.make -x xmldocs.make -x common -x m4 -x po -x autoregen.sh -x stamp-h.in origsrc/gst-editor-0.8.0/libs/gst/element-ui/Makefile.am src/gst-editor-0.8.0/libs/gst/element-ui/Makefile.am
 --- origsrc/gst-editor-0.8.0/libs/gst/element-ui/Makefile.am	2002-12-11 07:10:45.000000000 -0600
 +++ src/gst-editor-0.8.0/libs/gst/element-ui/Makefile.am	2006-08-15 16:25:57.112250000 -0500
 @@ -1,11 +1,12 @@
@@ -173,7 +168,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depco
  
  libgstelementuiincludedir = $(includedir)/@PACKAGE@-@VERSION@/gst/element-ui
  libgstelementuiinclude_HEADERS = gst-element-ui.h gst-element-ui-prop-view.h
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x 'Makefile.in*' -x 'makefile.in*' -x configure -x gnome-doc-utils.make -x intltool.m4 -x omf.make -x xmldocs.make -x common -x m4 -x po -x autoregen.sh -x stamp-h.in origsrc/gst-editor-0.8.0/pixmaps/Makefile.am src/gst-editor-0.8.0/pixmaps/Makefile.am
 --- origsrc/gst-editor-0.8.0/pixmaps/Makefile.am	2002-10-05 13:18:33.000000000 -0500
 +++ src/gst-editor-0.8.0/pixmaps/Makefile.am	2006-07-21 18:07:01.228500000 -0500
 @@ -20,7 +20,7 @@
@@ -185,7 +179,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depco
  	-rm -f pixmaps.h pixmaps-tmp
  	for i in $(PIXMAPS); do \
  	   ./gdk-pixbuf-csource --raw --build-list \
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x 'Makefile.in*' -x 'makefile.in*' -x configure -x gnome-doc-utils.make -x intltool.m4 -x omf.make -x xmldocs.make -x common -x m4 -x po -x autoregen.sh -x stamp-h.in origsrc/gst-editor-0.8.0/src/Makefile.am src/gst-editor-0.8.0/src/Makefile.am
 --- origsrc/gst-editor-0.8.0/src/Makefile.am	2004-09-26 04:54:55.000000000 -0500
 +++ src/gst-editor-0.8.0/src/Makefile.am	2006-08-15 16:27:05.049750000 -0500
 @@ -1,17 +1,18 @@
