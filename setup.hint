@@ -1,5 +1,5 @@
 category: Audio Gnome Video
-requires: cygwin gdk-pixbuf2 gstreamer08 gstreamer08-plugins libX11_6 libbonoboui2 libglade2 libgnome2 libgnomeui2
+requires: gdk-pixbuf2 gstreamer08 gstreamer08-plugins libX11_6 libbonoboui2 libglade2 libgnome2 libgnomeui2
 sdesc: "GStreamer GUI pipeline editor, element inspector, and pipeline launcher"
 ldesc: "GStreamer GUI programs: pipeline editor, element inspector,
 and pipeline launcher."
