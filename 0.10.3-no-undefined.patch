@@ -1,0 +1,24 @@
+This should probably be made shared...
+
+--- origsrc/gsteditor-0.10.3/libs/gst/debug-ui/Makefile.am	2008-07-10 02:13:44.000000000 -0500
++++ src/gsteditor-0.10.3/libs/gst/debug-ui/Makefile.am	2010-05-16 18:57:58.076533100 -0500
+@@ -4,7 +4,7 @@ libgstdebugui_la_SOURCES =	\
+ 	debug-ui.c
+ 
+ libgstdebugui_la_CFLAGS = -DDATADIR="\"$(pkgdatadir)/\"" $(GST_EDITOR_CFLAGS)
+-libgstdebugui_la_LDFLAGS = $(GST_EDITOR_LIBS)
++libgstdebugui_la_LDFLAGS = $(top_builddir)/libs/gst/common/libgste-common.la $(GST_EDITOR_LIBS)
+ 
+ libgstdebuguiincludedir = $(includedir)/@PACKAGE@-@VERSION@/gst/debug-ui
+ libgstdebuguiinclude_HEADERS = debug-ui.h
+--- origsrc/gsteditor-0.10.3/libs/gst/element-browser/Makefile.am	2008-07-10 02:13:45.000000000 -0500
++++ src/gsteditor-0.10.3/libs/gst/element-browser/Makefile.am	2010-05-16 19:02:24.949797300 -0500
+@@ -6,7 +6,7 @@ libgstelementbrowser_la_SOURCES =	\
+ 	element-tree.c
+ 
+ libgstelementbrowser_la_CFLAGS = -DDATADIR="\"$(pkgdatadir)/\"" $(GST_EDITOR_CFLAGS)
+-libgstelementbrowser_la_LDFLAGS = $(GST_EDITOR_LIBS)
++libgstelementbrowser_la_LDFLAGS = $(top_builddir)/libs/gst/common/libgste-common.la $(GST_EDITOR_LIBS)
+ 
+ libgstelementbrowserincludedir = $(includedir)/@PACKAGE@-@VERSION@/gst/element-browser
+ libgstelementbrowserinclude_HEADERS = browser.h caps-tree.h element-tree.h

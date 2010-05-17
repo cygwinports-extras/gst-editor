@@ -1,0 +1,14 @@
+ORIG_PN=${PN/-}
+inherit gnome2
+
+
+HOMEPAGE="http://gstreamer.freedesktop.org/"
+SRC_URI="http://gst-editor.googlecode.com/files/${ORIG_PN}-${PV}.tar.gz"
+
+PATCH_URI="
+	0.10.3-no-undefined.patch
+	0.10.3-parallel-make.patch
+"
+
+ACLOCAL_FLAGS="-I common/m4"
+MAKEOPTS+=" gladedir=\$(pkgdatadir) LDFLAGS=-no-undefined"

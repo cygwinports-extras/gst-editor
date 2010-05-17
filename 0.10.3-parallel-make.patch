@@ -1,0 +1,11 @@
+--- origsrc/gsteditor-0.10.3/pixmaps/Makefile.am	2008-07-10 02:13:45.000000000 -0500
++++ src/gsteditor-0.10.3/pixmaps/Makefile.am	2010-05-16 22:08:32.159525200 -0500
+@@ -20,7 +20,7 @@ BUILT_SOURCES = pixmaps.h
+ CLEANFILES = $(BUILT_SOURCES)
+ DISTCLEANFILES = $(BUILT_SOURCES)
+ 
+-pixmaps.h: gdk-pixbuf-csource $(PIXMAPS)
++pixmaps.h: gdk-pixbuf-csource$(EXEEXT) $(PIXMAPS)
+ 	-rm -f pixmaps.h pixmaps-tmp
+ 	for i in $(PIXMAPS); do \
+ 	   ./gdk-pixbuf-csource --raw --build-list \
