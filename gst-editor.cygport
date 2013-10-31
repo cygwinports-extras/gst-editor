@@ -1,0 +1,21 @@
+inherit gnome2
+
+NAME="gst-editor"
+VERSION=0.10.3
+RELEASE=1
+CATEGORY="Audio Video"
+SUMMARY="GStreamer GUI tools"
+DESCRIPTION="The GStreamer Pipeline Editor (gst-editor) is a graphical pipeline
+contruction and manipulation tool. Using the GooCanvas as the foundation, it
+allows you to draw media pipelines very quickly. It's not anywhere near
+complete yet, but it still lets you do some amazing things."
+HOMEPAGE="https://code.google.com/p/gst-editor/"
+SRC_URI="http://gst-editor.googlecode.com/files/gsteditor-${VERSION}.tar.gz"
+SRC_DIR="gsteditor-${VERSION}"
+PATCH_URI="
+	0.10.3-no-undefined.patch
+	0.10.3-parallel-make.patch
+"
+
+ACLOCAL_FLAGS="-I common/m4"
+MAKEOPTS+=" gladedir=\$(pkgdatadir) LDFLAGS=-no-undefined"

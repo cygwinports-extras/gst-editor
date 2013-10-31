@@ -1,8 +1,0 @@
-category: Audio Devel Video
-requires: libgcc1 libgdk_pixbuf2.0_0 libglade2.0_0 libglib2.0_0 libgoocanvas3 libgstreamer0.10_0 libgtk2.0_0 libintl8 libxml2
-sdesc: "GStreamer GUI tools"
-ldesc: "The GStreamer Pipeline Editor (gst-editor) is a graphical 
-pipeline contruction and manipulation tool. Using the GooCanvas as 
-the foundation, it allows you to draw media pipelines very quickly. It's 
-not anywhere near complete yet, but it still lets you do some amazing 
-things."
