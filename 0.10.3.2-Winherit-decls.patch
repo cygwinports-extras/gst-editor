@@ -1,0 +1,99 @@
+--- origsrc/gsteditor-0.10.3.2/libs/gst/editor/gsteditorbin.c	2010-03-26 06:09:05.000000000 -0500
++++ src/gsteditor-0.10.3.2/libs/gst/editor/gsteditorbin.c	2013-10-31 17:26:36.594425300 -0500
+@@ -47,7 +47,6 @@ static void gst_editor_bin_set_property
+ static void gst_editor_bin_get_property (GObject * object, guint prop_id,
+     GValue * value, GParamSpec * pspec);
+ 
+-/*static*/ void gst_editor_bin_realize (GooCanvasItem * citem);
+ static void gst_editor_bin_resize (GstEditorItem * bin);
+ static void gst_editor_bin_repack (GstEditorItem * bin);
+ static void gst_editor_bin_object_changed (GstEditorItem * bin,
+--- origsrc/gsteditor-0.10.3.2/libs/gst/editor/gsteditorbin.h	2009-07-01 05:01:14.000000000 -0500
++++ src/gsteditor-0.10.3.2/libs/gst/editor/gsteditorbin.h	2013-10-31 16:08:54.798785900 -0500
+@@ -60,5 +60,6 @@ GType gst_editor_bin_get_type (void);
+ gdouble gst_editor_bin_sort (GstEditorBin * bin, gdouble step);
+ void gst_editor_bin_paste (GstEditorBin * bin);
+ void gst_editor_bin_debug_output (GstEditorBin * bin);
++void gst_editor_bin_realize (GooCanvasItem * citem);
+ 
+ #endif /* __GST_EDITOR_BIN_H__ */
+--- origsrc/gsteditor-0.10.3.2/libs/gst/editor/gsteditorelement.c	2010-03-25 06:03:04.000000000 -0500
++++ src/gsteditor-0.10.3.2/libs/gst/editor/gsteditorelement.c	2013-10-31 17:26:47.899071900 -0500
+@@ -53,7 +53,6 @@ static void gst_editor_element_set_prope
+ static void gst_editor_element_get_property (GObject * object, guint prop_id,
+     GValue * value, GParamSpec * pspec);
+ 
+-/*static*/ void gst_editor_element_realize (GooCanvasItem * citem);
+ static void gst_editor_element_resize (GstEditorItem * item);
+ static void gst_editor_element_repack (GstEditorItem * item);
+ static void gst_editor_element_object_changed (GstEditorItem * bin,
+--- origsrc/gsteditor-0.10.3.2/libs/gst/editor/gsteditorelement.h	2009-06-26 11:10:03.000000000 -0500
++++ src/gsteditor-0.10.3.2/libs/gst/editor/gsteditorelement.h	2013-10-31 16:04:35.460952600 -0500
+@@ -106,5 +106,6 @@ void gst_editor_element_stop_child (GstE
+ 
+ gboolean gst_editor_element_sync_state (GstEditorElement * element);
+ void gst_editor_element_add_pads (GstEditorElement * element);
++void gst_editor_element_realize (GooCanvasItem * citem);
+ 
+ #endif /* __GST_EDITOR_ELEMENT_H__ */
+--- origsrc/gsteditor-0.10.3.2/libs/gst/editor/gsteditoritem.c	2009-09-09 07:51:07.000000000 -0500
++++ src/gsteditor-0.10.3.2/libs/gst/editor/gsteditoritem.c	2013-10-31 17:28:12.881932700 -0500
+@@ -46,7 +46,6 @@ static void gst_editor_item_get_property
+     GValue * value, GParamSpec * pspec);
+ 
+ 
+-/*static*/ void gst_editor_item_realize (GooCanvasItemSimple * citem);
+ //void gst_editor_item_realize (GooCanvasItem * citem);
+ static void gst_editor_item_object_changed (GstEditorItem * item,
+     GstObject * object);
+--- origsrc/gsteditor-0.10.3.2/libs/gst/editor/gsteditoritem.h	2009-07-03 04:23:29.000000000 -0500
++++ src/gsteditor-0.10.3.2/libs/gst/editor/gsteditoritem.h	2013-10-31 17:23:17.678048000 -0500
+@@ -144,6 +144,8 @@ void gst_editor_item_repack (GstEditorIt
+ GstEditorItem *gst_editor_item_get (GstObject * object);
+ void gst_editor_item_move (GstEditorItem * item, gdouble dx, gdouble dy);
+ void gst_editor_item_disconnect (GstEditorItem * parent,GstEditorItem * child);
++void gst_editor_item_hash_remove (GstObject * object);
++void gst_editor_item_realize (GooCanvasItemSimple * citem);
+ 
+ #ifdef POPUP_MENU
+ #define GST_EDITOR_ITEM_CLASS_PREPEND_MENU_ITEMS(item_class, menuitems, nitems)         \
+--- origsrc/gsteditor-0.10.3.2/libs/gst/editor/gsteditorlink.c	2009-09-09 07:51:07.000000000 -0500
++++ src/gsteditor-0.10.3.2/libs/gst/editor/gsteditorlink.c	2013-10-31 17:25:35.783947200 -0500
+@@ -10,7 +10,6 @@ static void gst_editor_link_set_property
+     const GValue * value, GParamSpec * pspec);
+ static void gst_editor_link_get_property (GObject * object, guint prop_id,
+     GValue * value, GParamSpec * pspec);
+-/*static*/ void gst_editor_link_realize (GooCanvasItem * citem);
+ static void gst_editor_link_resize (GstEditorLink * link);
+ 
+ /* callbacks from gstreamer */
+--- origsrc/gsteditor-0.10.3.2/libs/gst/editor/gsteditorlink.h	2008-09-23 04:24:02.000000000 -0500
++++ src/gsteditor-0.10.3.2/libs/gst/editor/gsteditorlink.h	2013-10-31 17:24:50.339347900 -0500
+@@ -67,6 +67,7 @@ GType gst_editor_link_get_type (void);
+ gboolean gst_editor_link_link (GstEditorLink * link);
+ void gst_editor_link_destroy(GstEditorLink * link);
+ void gst_editor_link_unlink (GstEditorLink * link);
++void gst_editor_link_realize (GooCanvasItem * citem);
+ 
+ 
+ #endif /* __GST_EDITOR_LINK_H__ */
+--- origsrc/gsteditor-0.10.3.2/libs/gst/editor/gsteditorpad.c	2009-09-09 07:51:07.000000000 -0500
++++ src/gsteditor-0.10.3.2/libs/gst/editor/gsteditorpad.c	2013-10-31 17:25:54.745031700 -0500
+@@ -41,7 +41,6 @@ static gboolean gst_editor_pad_enter_not
+ /* class functions */
+ static void gst_editor_pad_class_init (GstEditorPadClass * klass);
+ static void gst_editor_pad_init (GstEditorPad * pad);
+-/*static*/ void gst_editor_pad_realize (GooCanvasItem * citem);
+ static gboolean gst_editor_pad_realize_source (GooCanvasItem * citem);
+ static void gst_editor_pad_resize (GstEditorItem * item);
+ static void gst_editor_pad_repack (GstEditorItem * item);
+--- origsrc/gsteditor-0.10.3.2/libs/gst/editor/gsteditorpad.h	2008-07-10 02:13:45.000000000 -0500
++++ src/gsteditor-0.10.3.2/libs/gst/editor/gsteditorpad.h	2013-10-31 17:25:59.548306400 -0500
+@@ -101,6 +101,7 @@ GType gst_editor_pad_sometimes_get_type
+ GType gst_editor_pad_request_get_type (void);
+ GType gst_editor_pad_requested_get_type (void);
+ GType gst_editor_pad_ghost_get_type (void);
++void gst_editor_pad_realize (GooCanvasItem * citem);
+ 
+ 
+ #endif /* __GST_EDITOR_PAD_H__ */

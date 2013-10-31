@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="gst-editor"
-VERSION=0.10.3
+VERSION=0.10.3.2
 RELEASE=1
 CATEGORY="Audio Video"
 SUMMARY="GStreamer GUI tools"
@@ -15,7 +15,9 @@ SRC_DIR="gsteditor-${VERSION}"
 PATCH_URI="
 	0.10.3-no-undefined.patch
 	0.10.3-parallel-make.patch
+	0.10.3.2-glib-single-includes.patch
+	0.10.3.2-Winherit-decls.patch
 "
 
 ACLOCAL_FLAGS="-I common/m4"
-MAKEOPTS+=" gladedir=\$(pkgdatadir) LDFLAGS=-no-undefined"
+MAKEOPTS+=" LDFLAGS=-no-undefined"
